@@ -21,12 +21,12 @@ var CCP = {};
 	};
 
 	CCP.show = function _show() {
-		canvas.style.display = 'block';
+		canvas.style.visibility = 'visible';
 		initRendering();
 	};
 
 	CCP.hide = function _hide() {
-		canvas.style.display = 'none';
+		canvas.style.visibility = 'hidden';
 		clearInterval(interval);
 	};
 
