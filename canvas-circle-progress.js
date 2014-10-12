@@ -7,9 +7,12 @@ var CCP = {};
 	var canvas, context, interval,
 		x, y, radius;
 
-	CCP.init = function _init(canvasId) {
-		canvas = document.getElementById(canvasId);
+	CCP.init = function _init(options) {
+		canvas = document.getElementById(options.id);
 		context = canvas.getContext('2d');
+
+		context.strokeStyle = options.color;
+		context.lineWidth = options.width;
 
 		x = canvas.width / 2;
 		y = canvas.height / 2;
