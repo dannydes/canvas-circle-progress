@@ -1,0 +1,1 @@
+CCP.init('circle');
