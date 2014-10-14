@@ -41,7 +41,11 @@ var CCP = {};
 	}
 
 	function initRendering() {
-		interval = setInterval(render, 10);
+		if (requestAnimationFrame) {
+			render();
+		} else {
+			interval = setInterval(render, 10);
+		}
 	}
 
 	function render() {
@@ -50,6 +54,10 @@ var CCP = {};
 		context.beginPath();
 		context.arc(x, y, computeRadius(), 0, 2 * Math.PI);
 		context.stroke();
+
+		if (requestAnimationFrame && getComputedStyle(canvas).visibility === 'visible') {
+			requestAnimationFrame(render);
+		}
 	}
 
 })(document);

@@ -3,7 +3,7 @@ Canvas Circle Progress
 
 ## Compact
 
-Only 517 bytes (minified)!
+Only 649 bytes (minified)!
 
 ## Browser Compatibility
 
