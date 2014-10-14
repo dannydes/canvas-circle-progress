@@ -1,4 +1,4 @@
-var CCP = {};
+var SonarLoad = {};
 
 (function (document) {
 	
@@ -7,7 +7,7 @@ var CCP = {};
 	var canvas, context, interval,
 		x, y, radius;
 
-	CCP.init = function _init(options) {
+	SonarLoad.init = function _init(options) {
 		canvas = document.getElementById(options.id);
 		context = canvas.getContext('2d');
 
@@ -20,12 +20,12 @@ var CCP = {};
 		initRendering();
 	};
 
-	CCP.show = function _show() {
+	SonarLoad.show = function _show() {
 		canvas.style.visibility = 'visible';
 		initRendering();
 	};
 
-	CCP.hide = function _hide() {
+	SonarLoad.hide = function _hide() {
 		canvas.style.visibility = 'hidden';
 		clearInterval(interval);
 	};

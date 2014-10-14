@@ -1,11 +1,11 @@
-(function (document, CCP) {
+(function (document, SonarLoad) {
 
 	'use strict';
 
 	var hideButton = document.getElementById('hide'),
 		showButton = document.getElementById('show');
 
-	CCP.init({
+	SonarLoad.init({
 		id: 'circle',
 		color: 'rgb(255, 0, 0)',
 		width: 3
@@ -15,14 +15,14 @@
 		hideButton.disabled = true;
 		showButton.disabled = false;
 
-		CCP.hide();
+		SonarLoad.hide();
 	});
 
 	showButton.addEventListener('click', function _show() {
 		showButton.disabled = true;
 		hideButton.disabled = false;
 
-		CCP.show();
+		SonarLoad.show();
 	});
 
-})(document, CCP);
+})(document, SonarLoad);
