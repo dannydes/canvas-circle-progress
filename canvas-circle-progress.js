@@ -1,6 +1,6 @@
 var SonarLoad = {};
 
-(function (document) {
+(function (SonarLoad, requestAnimationFrame) {
 	
 	'use strict';
 
@@ -60,4 +60,4 @@ var SonarLoad = {};
 		}
 	}
 
-})(document);
+})(SonarLoad, requestAnimationFrame);
